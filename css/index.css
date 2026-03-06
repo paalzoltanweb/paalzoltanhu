@@ -1,25 +1,38 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
+@import url("./fonts/Bungee.css");
+@import url("./animations/wobble-hor-bottom.css");
 
-img {
-    height: 200px;
-    display: block;
-    margin-inline: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
+/* animation: wobble-hor-bottom 1.8s infinite both; */
+/* -webkit-animation: wobble-hor-bottom 1.8s infinite both; */
 
 h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 15px;
+    font-family: "Bungee", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 32px;
 }
 
-h2 {
+#gift_container svg {
+    height: 150px;
+    animation: wobble-hor-bottom 1.8s infinite both;
+    -webkit-animation: wobble-hor-bottom 1.8s infinite both;
+    fill: white;
+    filter: drop-shadow(0 0 10px hsla(0, 0%, 0%, 0.5));
+}
+
+#gift_container {
+    padding: 25px;
+    background-color: #0077b6;
+    border-radius: 50%;
+    width: max-content;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+#gift_tip {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(0, 0%, 50%);
+    margin-top: 50px;
     font-size: 24px;
-    font-weight: normal;
-    font-style: italic;
-    margin: 15px;
 }
