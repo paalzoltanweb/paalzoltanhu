@@ -2,7 +2,9 @@ const emGiftContainer = document.querySelector("#gift_container");
 const emGiftIcon = document.querySelector("#gift_container svg");
 const emBody = document.querySelector("body");
 const emTitle = document.querySelector("h1");
-const emTip = document.querySelector("#gift_tip")
+const emTip = document.querySelector("#gift_tip");
+const emPaper = document.querySelector("#paper");
+const emPaperContent = document.querySelector("#paper_content");
 
 function giftClicked() {
     emGiftIcon.style.animation = "none";
@@ -20,4 +22,17 @@ function giftClicked() {
     emGiftContainer.style.transition = "transform 0.5s, opacity 0.5s";
     emGiftContainer.style.transform = "scale(2)";
     emGiftContainer.style.opacity = 0;
+
+    emPaper.style.transition = "transform 2s, opacity 2s";
+
+    setTimeout(() => {
+        emPaper.style.transform = "translate(-50%, -50%) scale(1)";
+        emPaper.style.opacity = 1;
+    }, 500);
+
+    emPaperContent.style.transition = "opacity 1s";
+
+    setTimeout(() => {
+        emPaperContent.style.opacity = 1;
+    }, 1500);
 }

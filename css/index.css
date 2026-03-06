@@ -4,6 +4,11 @@
 /* animation: wobble-hor-bottom 1.8s infinite both; */
 /* -webkit-animation: wobble-hor-bottom 1.8s infinite both; */
 
+html, body {
+    overflow: hidden;
+    margin: 0;
+}
+
 h1 {
     font-family: "Bungee", Arial, Helvetica, sans-serif;
     text-align: center;
@@ -16,6 +21,7 @@ h1 {
     -webkit-animation: wobble-hor-bottom 1.8s infinite both;
     fill: white;
     filter: drop-shadow(0 0 10px hsla(0, 0%, 0%, 0.5));
+    pointer-events: none;
 }
 
 #gift_container {
@@ -35,4 +41,43 @@ h1 {
     color: hsl(0, 0%, 50%);
     margin-top: 50px;
     font-size: 24px;
+}
+
+#paper {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100vw - 20px);
+    height: max-content;
+    transform: translate(-50%, -50%) scale(0.25);
+    background-color: white;
+    border: 3px solid hsl(0, 0%, 75%);
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+}
+
+#paper_content {
+    opacity: 0;
+}
+
+#paper svg {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#paper h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+}
+
+#paper ul {
+    padding-left: 30px;
+    color: hsl(0, 0%, 25%);
+}
+
+#paper li {
+    margin: 10px 0;
 }
